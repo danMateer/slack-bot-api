@@ -17,14 +17,17 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "./node_modules/jshint/bin/jshint index.js && ./node_modules/jscs/bin/jscs index.js && ./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/jshint/bin/jshint index.js && ./node_modules/jscs/bin/jscs index.js && ./node_modules/mocha/bin/mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "extend": "^2.0.1",
     "lodash": "^4.17.2",
     "request": "^2.56.0",
     "vow": "^0.4.9",
-    "ws": "^1.0.1"
+    "ws": "^1.0.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "chai": "^2.3.0",
@@ -33,5 +36,6 @@
     "mocha": "^2.2.5",
     "sinon": "^1.14.1",
     "sinon-chai": "^2.8.0"
-  }
+  },
+  "snyk": true
 }
